@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{45BCF60A-FFF4-47C3-9CAB-692B5197E0E9}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Resolver</RootNamespace>
+    <RootNamespace>Dspeckmann.Resolver</RootNamespace>
     <AssemblyName>Resolver</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -42,11 +42,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DnsAdditional.cs" />
-    <Compile Include="DnsAnswer.cs" />
-    <Compile Include="DnsAuthority.cs" />
-    <Compile Include="DnsPacket.cs" />
-    <Compile Include="DnsQuestion.cs" />
+    <Compile Include="DNS\Additional.cs" />
+    <Compile Include="DNS\Answer.cs" />
+    <Compile Include="DNS\Authority.cs" />
+    <Compile Include="DNS\Packet.cs" />
+    <Compile Include="DNS\Question.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
