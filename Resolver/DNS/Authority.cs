@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Dspeckmann.Resolver.DNS
+namespace DSpeckmann.Resolver.DNS
 {
     class Authority
     {
