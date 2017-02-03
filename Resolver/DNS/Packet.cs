@@ -10,17 +10,39 @@ namespace DSpeckmann.Resolver.DNS
     {
         public Header Header { get; set; }
         public List<Question> QuestionSection { get; set; }
-        public List<Answer> AnswerSection { get; set; }
-        public List<Authority> AuthoritySection { get; set; }
-        public List<Additional> AdditionalSection { get; set; }
+        public List<ResourceRecord> AnswerSection { get; set; }
+        public List<ResourceRecord> AuthoritySection { get; set; }
+        public List<ResourceRecord> AdditionalSection { get; set; }
         
         public Packet()
         {
             Header = new Header();
             QuestionSection = new List<Question>();
-            AnswerSection = new List<Answer>();
-            AuthoritySection = new List<Authority>();
-            AdditionalSection = new List<Additional>();
+            AnswerSection = new List<ResourceRecord>();
+            AuthoritySection = new List<ResourceRecord>();
+            AdditionalSection = new List<ResourceRecord>();
+        }
+
+        public Packet(byte[] source)
+        {
+            // TODO: Read packet
+        }
+
+        public byte[] GetBytes()
+        {
+            var bytes = new List<Byte>();
+            var message = new MessagePart[] { Header }
+                .Concat(QuestionSection)
+                .Concat(AnswerSection)
+                .Concat(AuthoritySection)
+                .Concat(AdditionalSection);
+
+            foreach(MessagePart messagePart in message)
+            {
+                bytes.AddRange(messagePart.GetBytes());
+            }
+
+            return bytes.ToArray();
         }
     }
 }

@@ -42,14 +42,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DNS\Additional.cs" />
-    <Compile Include="DNS\Answer.cs" />
-    <Compile Include="DNS\Authority.cs" />
+    <Compile Include="DNS\QClass.cs" />
+    <Compile Include="DNS\QType.cs" />
+    <Compile Include="DNS\ResourceRecord.cs" />
     <Compile Include="DNS\Header.cs" />
     <Compile Include="DNS\OpCode.cs" />
     <Compile Include="DNS\Packet.cs" />
     <Compile Include="DNS\Question.cs" />
     <Compile Include="DNS\RCode.cs" />
+    <Compile Include="DNS\MessagePart.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
